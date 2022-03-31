@@ -15,9 +15,8 @@ function gameOver(){
     str = "";
     index = 0;
     timeLeft = 30;
-    $(document).keypress(function(event){
-        console.log("restart the game")
-    })
+    $('#start').prop('disabled',false)
+    $(document).unbind()
 }
 
 function countdown() {
@@ -48,7 +47,10 @@ function start(){
                 $('#text').html(`<h3 style="color:green; display:inline; margin:0;"> ${typed}<span style="color:red;">${untyped}</span></h3>`)
                 index++;
             }else{
-                console.log('NOT match')
+                var audio = new Audio('wrong.mp3')
+                audio.play();
             }
         })
+        $('#start').text('Restart')
+        $('#start').prop('disabled',true)
 }
