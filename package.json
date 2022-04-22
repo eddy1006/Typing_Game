@@ -1,0 +1,22 @@
+{
+  "name": "typing-game",
+  "version": "1.0.0",
+  "description": "A typing game to improve your speed and accuracy",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eddy1006/Typing_Game.git"
+  },
+  "author": "Aditya Gupta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eddy1006/Typing_Game/issues"
+  },
+  "homepage": "https://github.com/eddy1006/Typing_Game#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
