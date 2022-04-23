@@ -1,54 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <title>Typing game</title>
+    <link rel="stylesheet" href="login.css">
+    <title>Typing Game</title>
 </head>
-
 <body>
-    <div class="bg">
-        <h1 style="margin-top: 0; color: white; padding: 80px 10px 50px 50px; font-size: 6rem;font-family: 'Roboto' , sans-serif;">Welcome
-            to Type Correcter</h1>
-            <div class="select" style="margin-block: 20px;">
-                <select id="words">
-                  <option value="1">---Select no of words---</option>
-                  <option value="10">10</option>
-                  <option value="15">15</option>
-                  <option value="20">20</option>
-                </select>
+    <div class="wrapper">
+        <div class="title-text">
+          <div class="title login">Login Form</div>
+          <div class="title signup">Signup Form</div>
+        </div>
+        <div class="form-container">
+          <div class="slide-controls">
+            <input type="radio" name="slide" id="login" checked>
+            <input type="radio" name="slide" id="signup">
+            <label for="login" class="slide login">Login</label>
+            <label for="signup" class="slide signup">Signup</label>
+            <div class="slider-tab"></div>
+          </div>
+          <div class="form-inner">
+            <form action="/login" method="get" class="login">
+              <div class="field">
+                <input type="text" placeholder="Email Address" required>
               </div>
-              <div class="select" style="margin-block: 20px;">
-                <select id="duration">
-                  <option value="1">---Select duration---</option>
-                  <option value="30">30sec</option>
-                  <option value="45">45sec</option>\
-                  <option value="60">60sec</option>
-                </select>
+              <div class="field">
+                <input type="password" placeholder="Password" required>
               </div>
-              <div class="select" style="margin-block: 20px;">
-                <select id="penalty">
-                  <option value="-1">--Select Penalty---</option>
-                  <option value="0">0sec</option>
-                  <option value="1">2sec</option>
-                  <option value="4">5sec</option>
-                </select>
+              <div class="pass-link"><a href="#">Forgot password?</a></div>
+              <div class="field btn">
+                <div class="btn-layer"></div>
+                <input type="submit" value="Login">
               </div>
-            <div class="container">
-                <h3 id="text" style="padding: 0 5%;">PRESS Start to play</h3>
-            </div>
-            <div id="some_div"></div>
-        <button type="button" class="btn btn-dark" onclick="start()" id="start"><em>Start Game</em></button>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="index.js"></script>
+              <div class="signup-link">Not a member? <a href="">Signup now</a></div>
+            </form>
+            <form action="/signup" method="post" class="signup">
+              <div class="field">
+                <input type="text" placeholder="Email Address" name="email" required>
+              </div>
+              <div class="field">
+                <input type="password" placeholder="Password" name="password" required>
+              </div>
+              <div class="field">
+                <input type="password" placeholder="Confirm password" required>
+              </div>
+              <div class="field btn">
+                <div class="btn-layer"></div>
+                <input type="submit" value="Signup">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <script src="login.js"></script>    
 </body>
-
 </html>

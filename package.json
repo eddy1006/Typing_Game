@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/eddy1006/Typing_Game#readme",
   "dependencies": {
-    "express": "^4.17.3"
+    "body-parser": "^1.20.0",
+    "express": "^4.17.3",
+    "mongodb": "^4.5.0"
   }
 }
